@@ -1,0 +1,198 @@
+/*Color de todo el fondo*/
+body {
+	background-color: rgb(81,119,132);
+}
+
+.container h1
+{
+	color: #132329;
+  	text-shadow: -1px 0px 0px rgba(0, 0, 0, 0.50);
+  	font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
+	font-size: 49px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: 73.5px;
+
+}
+a
+{
+	text-decoration: none;
+	color: #111b47;
+}
+
+a:hover
+{
+	border-bottom: 1px dashed #ED971F;
+	color: #ED971F;
+}
+
+/**** slider ****/
+
+#slider, ul
+{
+	width: 1000px;
+	height: 500px;
+
+}
+
+#slider
+{
+	margin: auto;
+	overflow: hidden;
+	padding: auto;
+	border: 1px solid rgba(0, 0, 0, 1);
+	margin-top: 50px;
+	border-radius: 10px;
+	box-shadow: 2px 2px 14px rgba(0, 0, 0, 0.75);
+	position: relative;
+	width: 1000px;
+	background-color: rgba(255, 255, 255,1)
+}
+
+#slider li
+{
+	float: left;
+	position: relative;
+	width: 1000px;
+	display: inline-block;
+	height: 500px;
+}
+
+#slider ul
+{
+	list-style: none;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 9000px;
+	transition: left .3s linear;
+	-moz-transition: left .3s linear;
+	-o-transition: left .3s linear;
+	-webkit-transition: left .3s linear;
+	margin-left: -50px;
+  	font-family: century gothic;
+  	color: #666;
+}
+
+/*** Contenido ***/
+
+.slider-container
+{
+	margin: 0 auto;
+	padding: 0;
+	width: 900px;
+  	min-height: 450px;
+  	border-bottom: 1px solid #ccc;
+}
+
+.slider-container h4
+{
+ 	color: #0A7FAD;
+  	text-shadow: -1px 0px 0px rgba(0, 0, 0, 0.50);
+  	font-size: xx-large;
+}
+
+.slider-container  p
+{
+	margin: auto;
+	font-weight: semi-bold;
+	line-height: 150%;
+	text-align: justify;
+	color: rgba(81,81,81,1);
+}
+
+/*** target hooks ****/
+
+@-webkit-keyframes slide-animation {
+	0% {opacity:0;}
+	2% {opacity:1;}
+	20% {left:0px; opacity:1;}
+	22.5% {opacity:0.6;}
+	25% {left:-1000px; opacity:1;}
+	45% {left:-1000px; opacity:1;}
+	47.5% {opacity:0.6;}
+	50% {left:-2000px; opacity:1;}
+	70% {left:-2000px; opacity:1;}
+	72.5% {opacity:0.6;}
+	75% {left:-3000px; opacity:1;}
+	95% {opacity:1;}
+	98% {left:-3000px; opacity:0;} 
+	100% {left:0px; opacity:0;}
+}
+
+#slider ul
+{
+	-webkit-animation: slide-animation 30s infinite;
+}
+
+/* Para pausar cuando se pone el mouse*/
+
+#slider ul:hover
+{
+	-moz-animation-play-state: paused;
+	-webkit-animation-play-state: paused;
+}
+
+
+/*@keyframes slider{
+
+0% {
+	left: 0;
+}
+
+20% {
+	left: 0;
+}
+
+25% {
+	left: -100%;
+}
+
+45% {
+	left: -100%;
+}
+
+50% {
+	left: -200%;
+}
+
+70% {
+	left: -200%;
+}
+
+75% {
+	left: -300%;
+}
+
+95% {
+	left: -300%;
+}
+
+100% {
+	left: -300%;
+}
+
+#slider {
+
+	overflow: hidden;
+}
+
+#slider figure section {
+	width: 20%;
+	float: left;
+}
+
+#slider figure {
+	position:relative;
+	width: 500%; Depende de cada numero que haya, si hay 6=600%
+	margin: 0;
+	left: 0;
+	text-align: center;
+	font-size: 0;
+	animation: 20s slider infinite;
+}
+
+
+
+} Fuente de codigo original:https://codepen.io/johnlouie04/pen/BqyGb */
